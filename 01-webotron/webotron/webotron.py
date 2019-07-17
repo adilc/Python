@@ -13,7 +13,7 @@ import mimetypes
 
 import boto3
 import click
-
+import bucket
 
 session = boto3.Session(profile_name='ninjaclirole')
 s3 = session.resource('s3')

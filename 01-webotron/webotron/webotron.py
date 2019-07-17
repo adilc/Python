@@ -15,5 +15,12 @@ def list_buckets():
         for bucket in s3.buckets.all():
                 print(bucket)
 
+@cli.command('list-bucket-objects')
+@click.argument('bucket')
+def list_bucket_objects(bucket):
+        "list bucket objects"
+        for obj in s3.Bucket(bucket).objects.all():
+                print(obj)
+
 if __name__ == '__main__':
         cli()

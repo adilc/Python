@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "071b863403fcba48c93ac75a9187a9b7c806418b9cbb64aa883394f1324d94f5"
+            "sha256": "52ccac366bf385abed9ef015998adfb84d07922e859ebe6c2ae4a9c1cfd6e5a7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -182,6 +182,13 @@
             "index": "pypi",
             "version": "==2.5.0"
         },
+        "pydocstyle": {
+            "hashes": [
+                "sha256:58c421dd605eec0bce65df8b8e5371bb7ae421582cdf0ba8d9435ac5b0ffc36a"
+            ],
+            "index": "pypi",
+            "version": "==4.0.0"
+        },
         "pygments": {
             "hashes": [
                 "sha256:71e430bc85c88a430f000ac1d9b331d2407f681d6f6aec95e8bcfbc3df5b0127",
@@ -195,6 +202,12 @@
                 "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
             ],
             "version": "==1.12.0"
+        },
+        "snowballstemmer": {
+            "hashes": [
+                "sha256:9f3b9ffe0809d174f7047e121431acf99c89a7040f0ca84f94ba53a498e6d0c9"
+            ],
+            "version": "==1.9.0"
         },
         "traitlets": {
             "hashes": [

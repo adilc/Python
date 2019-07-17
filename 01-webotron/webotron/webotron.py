@@ -1,10 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""Webotron: Deploy Websites with AWS
+"""
+
+Webotron: Deploy Websites with AWS
 -Configure AWS S3 Buckets
 -Create them
 """
+
 from pathlib import Path
 import mimetypes
 
@@ -79,7 +82,7 @@ def upload_file(s3_bucket, path, key):
         path,
         key,
         ExtraArgs={
-            'ContentType': 'text/html'
+            'ContentType': content_type
         }
     )
 

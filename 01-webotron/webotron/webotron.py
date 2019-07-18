@@ -1,8 +1,8 @@
+
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 """
-
 Webotron: Deploy Websites with AWS
 -Configure AWS S3 Buckets
 -Create them
@@ -13,7 +13,7 @@ import mimetypes
 
 import boto3
 import click
-import bucket
+from botocore.exceptions import ClientError
 
 session = boto3.Session(profile_name='ninjaclirole')
 s3 = session.resource('s3')
@@ -73,7 +73,7 @@ def staticwebsite(bucket):
             'Suffix': 'index.html'
         }
         })
-
+    return
 
 
 def upload_file(s3_bucket, path, key):
@@ -97,11 +97,11 @@ def sync(pathname, bucket):
     root = Path(pathname).expanduser().resolve()
 
     def handle_directory(target):
-        for ppath in target.iterdir():
-            if ppath.is_dir():
-                handle_directory(ppath)
-            if ppath.is_file():
-                upload_file(s3_bucket, str(ppath), str(ppath.relative_to(root)))
+        for p in target.iterdir():
+            if p.is_dir():
+                handle_directory(p)
+            if p.is_file():
+                upload_file(s3_bucket, str(p), str(p.relative_to(root)))
     handle_directory(root)
 
 

@@ -15,7 +15,7 @@ import boto3
 import click
 from botocore.exceptions import ClientError
 
-session = boto3.Session(profile_name='ninjaclirole')
+session = boto3.Session()
 s3 = session.resource('s3')
 
 

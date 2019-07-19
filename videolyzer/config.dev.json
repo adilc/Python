@@ -1,0 +1,7 @@
+{
+    "videolyzer": {
+        "profile": "ninjaclirole",
+        "videos_bucket": "acvideolayzer1",
+        "videos_table": ""
+    }
+}
